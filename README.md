@@ -2,6 +2,6 @@
 <img src="profil.jpg"/>
 ♨️ LESSTTHANRENZEN ♨️
 
-#PIXEL BIRD
+# PIXEL BIRD
 
 <img src="player.png"/>
