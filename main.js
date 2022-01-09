@@ -104,7 +104,7 @@ function loading ()
         function kena(){
             for(var i=0;i<tiang.length;i++){
                  var t= tiang[i]
-             if((player.x+player.w>t.x && player.y<t.y+t.h && player.x<t.x+t.w)||(player.x+player.w>t.x && player.y+player.h>t.y+t.h+250 && player.x<t.x+t.w)){
+             if((player.x+player.w>t.x && player.y<t.y+t.h&& player.x<t.x+t.w)||(player.x+player.w>t.x && player.y+player.h>t.y+t.h+150 && player.x<t.x+t.w)){
                         selesai ();
                   }else if(t.x+t.w<player.x){
                      if(tambah){
@@ -129,7 +129,7 @@ function loading ()
            erlang.play();
            ctx.font="60px savage";
            ctx.fillStyle="red";
-           ctx.fillText("YOU DIE :( ",60,200);
+           ctx.fillText("YOU DIED :( ",60,200);
            ctx.fill();
            ctx.fillStyle="white";
            ctx.font="60px savage";
@@ -152,8 +152,8 @@ function loading ()
 		cetak();
 		function cetak ()
         {
-        	var x=400,y=0,w=30,h=507;
-            var acak = Math.floor(Math.random()*150);
+        	var x=400,y=0,w=30,h=500;
+            var acak = Math.floor(Math.random()*300);
             tiang.push({"x":x,"y":y-acak,"w":w,"h":h});
 		}
 		
@@ -163,9 +163,9 @@ function loading ()
         for(var i=0; i<tiang.length;i++){
              var t = tiang[i];
              ctx.drawImage(tg,t.x--,t.y);
-             ctx.drawImage(tg,t.x--,t.y+t.h+250);
+             ctx.drawImage(tg,t.x--,t.y+t.h+150);
 
-             if(t.x+t.w<0){
+             if(t.x+t.w<-2){
                  tiang.splice(i,1);
                  tambah=true;
              }
