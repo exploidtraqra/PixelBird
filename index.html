@@ -1,0 +1,45 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta chartset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Pixel MAX 2D</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<div id="reload" onClick="window.location.reload();mc.stop();"></div>
+<div id="start"></div>
+<div id="credits" onClick="cret.style.display='block';"></div>
+<div id="music"  onClick="playAudio();"></div>
+<div id="musicoff"  onClick="pauseAudio();"></div>
+<div id="cret">
+<img id="xbtn" src="exit.png"/>
+<h2>GAME DEV</h1>
+<img id="profil" src="profil.jpg" width="50" height="50"/><br>
+GILANG BAE
+<p>Wih... gila sih</p><p> capek gw buat pakai hp :v </p>
+<p>Game pixel nih jadi wajar buriq</p>
+</div>
+</body>
+<script >
+    var cret = document.getElementById("cret");
+    var mc = new Audio("old.mp3");
+    function playAudio() {
+        var m = document.getElementById("music");
+        var xm = document.getElementById("musicoff");
+        m.style.display="none";
+        xm.style.display="block";
+        mc.loop=true;
+        mc.play();
+    }
+    function pauseAudio(){
+        var m = document.getElementById("music");
+        var xm = document.getElementById("musicoff");
+        m.style.display="block";
+        xm.style.display="none";
+        mc.pause();
+    }
+</script>
+<script src="main.js"></script>
+</html>
