@@ -1,4 +1,4 @@
 # PixelBird
-<img src="profil.png"/>
+<img src="profil.jpg"/>
 
 ♨️ LESSTTHANRENZEN ♨️
